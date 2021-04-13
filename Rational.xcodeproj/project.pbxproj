@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		40C88BF32604AE7A0006C78A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40C88BF22604AE7A0006C78A /* main.cpp */; };
+		40C88BFC2604AE9A0006C78A /* rational.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40C88BFA2604AE9A0006C78A /* rational.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		40C88BEF2604AE7A0006C78A /* Rational */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Rational; sourceTree = BUILT_PRODUCTS_DIR; };
 		40C88BF22604AE7A0006C78A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		40C88BFA2604AE9A0006C78A /* rational.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = rational.cpp; sourceTree = "<group>"; };
+		40C88BFB2604AE9A0006C78A /* rational.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = rational.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				40C88BF22604AE7A0006C78A /* main.cpp */,
+				40C88BFA2604AE9A0006C78A /* rational.cpp */,
+				40C88BFB2604AE9A0006C78A /* rational.hpp */,
 			);
 			path = Rational;
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				40C88BF32604AE7A0006C78A /* main.cpp in Sources */,
+				40C88BFC2604AE9A0006C78A /* rational.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +245,7 @@
 		40C88BF72604AE7A0006C78A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -247,6 +254,7 @@
 		40C88BF82604AE7A0006C78A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
