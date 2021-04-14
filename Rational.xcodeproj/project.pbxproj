@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		405C5F932627019500A10B63 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 405C5F922627019500A10B63 /* Makefile */; };
 		40C88BF32604AE7A0006C78A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40C88BF22604AE7A0006C78A /* main.cpp */; };
 		40C88BFC2604AE9A0006C78A /* rational.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40C88BFA2604AE9A0006C78A /* rational.cpp */; };
 /* End PBXBuildFile section */
@@ -24,6 +25,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		405C5F922627019500A10B63 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		40C88BEF2604AE7A0006C78A /* Rational */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Rational; sourceTree = BUILT_PRODUCTS_DIR; };
 		40C88BF22604AE7A0006C78A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		40C88BFA2604AE9A0006C78A /* rational.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = rational.cpp; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				40C88BF22604AE7A0006C78A /* main.cpp */,
 				40C88BFA2604AE9A0006C78A /* rational.cpp */,
 				40C88BFB2604AE9A0006C78A /* rational.hpp */,
+				405C5F922627019500A10B63 /* Makefile */,
 			);
 			path = Rational;
 			sourceTree = "<group>";
@@ -123,6 +126,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				405C5F932627019500A10B63 /* Makefile in Sources */,
 				40C88BF32604AE7A0006C78A /* main.cpp in Sources */,
 				40C88BFC2604AE9A0006C78A /* rational.cpp in Sources */,
 			);
