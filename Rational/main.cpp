@@ -5,20 +5,18 @@
 //  Created by Klaus Ahrens on 19.03.21.
 //
 
+#include <cstdlib>
 #include <iostream>
 #include "rational.hpp"
 
-int main(int argc, const char * argv[]) {
-    
-    auto r1 ="22/7"_Q;
-    double d1 = r1;
+int main() {
+    // using Rational = Rational<int>;
+    auto r1 = Rational{22,7};
+    const auto d1 = double(r1);
     std::cout << r1 << "\n" << d1 << "\n";
+    auto r2 = Rational{22,7};
     
-    const auto r2 = 22_Q/7_Q;
-    double d2 = r2;
-
-    std::cout << r2 << "\n" << d2 << "\n";
-
-    Rational r3 = Rational(44);
+    std::cout << r1+r2 << "\n";
+    
     return 0;
 }

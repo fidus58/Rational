@@ -10,79 +10,42 @@
 
 #include <numeric>
 #include <string>
-#include <cstring>
+#include <iostream>
 
-
+template<typename I = int>
 class Rational {
     
-private: int n, z;
+private: // anyway classes start private
+    I n, z;
     
 public:
-    Rational (int zaehler, int nenner = 1)
-//    :
-//    z{ [zaehler, nenner](){
-//        int g = std::gcd(zaehler, nenner);
-//        return zaehler/g;}() }
-//    ,
-//    n{ [zaehler, nenner](){
-//        int g = std::gcd(zaehler, nenner);
-//        return nenner/g;}() }
-//    {}
-    {
-        int g = std::gcd(zaehler, nenner);
-        z = zaehler/g;
-        n = nenner/g;
+    Rational (int zaehler = 0, int nenner = 1) {
+        auto g = std::gcd(zaehler, nenner);
+        z = zaehler / g;
+        n = nenner / g;
     }
     
-    Rational operator+(Rational r) {
-        int hn = n/std::gcd(n, r.n) * r.n;
-        int z1 = hn/n * z;
-        int z2 = hn/r.n * r.z;
+    friend Rational operator+(Rational r1, Rational r2)
+    {
+        int hn = r1.n/std::gcd(r1.n, r2.n) * r2.n;
+        int z1 = hn/r1.n * r1.z;
+        int z2 = hn/r2.n * r2.z;
         
         return Rational(z1 + z2, hn);
     }
-
-    Rational operator*(Rational r) {
-        return Rational(z * r.z, n * r.n);
-    }
     
-    Rational operator/(Rational r) {
-        return Rational(z * r.n, n * r.z);
-    }
-    
-    Rational inverse() {
-        //return Rational(1)/(*this);
-        return Rational(n,z);
-    }
+    std::string to_string() const;
     
     friend std::ostream& operator<<(std::ostream& o, const Rational& r) {
-        return o<<r.to_string();
+        return o<<"("<<r.z<<"/"<<r.n<<")";
     }
-    
-    std::string to_string() const {
-        using namespace std::string_literals;
-        std::string s("(");
-        s+=std::to_string(z); s+="/";
-        s+=std::to_string(n); s+=")";
-        return s;
-    }
-    
+
     operator double() const {
-        return 1. * z / n;
+            return 1. * z / n;
     }
-    
 };
 
-inline Rational operator "" _Q(const char* literal, size_t l) {
-    std::string slit(literal);
-    auto p = slit.find("/");
-    int z = std::stoi(slit.substr(0, p));
-    int n = std::stoi(slit.substr(p+1, std::string::npos));
-    return Rational(z, n);
-}
 
-inline Rational operator "" _Q(unsigned long long z) {
-    return Rational(z);
-}
+
 
 #endif /* rational_hpp */
