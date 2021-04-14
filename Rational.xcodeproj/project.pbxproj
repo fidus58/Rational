@@ -47,6 +47,8 @@
 		40C88BE62604AE7A0006C78A = {
 			isa = PBXGroup;
 			children = (
+				405C5F922627019500A10B63 /* Makefile */,
+				405C5F952627058C00A10B63 /* lgtm.yml */,
 				40C88BF12604AE7A0006C78A /* Rational */,
 				40C88BF02604AE7A0006C78A /* Products */,
 			);
@@ -66,8 +68,6 @@
 				40C88BF22604AE7A0006C78A /* main.cpp */,
 				40C88BFA2604AE9A0006C78A /* rational.cpp */,
 				40C88BFB2604AE9A0006C78A /* rational.hpp */,
-				405C5F922627019500A10B63 /* Makefile */,
-				405C5F952627058C00A10B63 /* lgtm.yml */,
 			);
 			path = Rational;
 			sourceTree = "<group>";
