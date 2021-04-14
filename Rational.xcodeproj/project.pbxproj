@@ -26,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		405C5F922627019500A10B63 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		405C5F952627058C00A10B63 /* lgtm.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = lgtm.yml; sourceTree = "<group>"; };
 		40C88BEF2604AE7A0006C78A /* Rational */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Rational; sourceTree = BUILT_PRODUCTS_DIR; };
 		40C88BF22604AE7A0006C78A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		40C88BFA2604AE9A0006C78A /* rational.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = rational.cpp; sourceTree = "<group>"; };
@@ -66,6 +67,7 @@
 				40C88BFA2604AE9A0006C78A /* rational.cpp */,
 				40C88BFB2604AE9A0006C78A /* rational.hpp */,
 				405C5F922627019500A10B63 /* Makefile */,
+				405C5F952627058C00A10B63 /* lgtm.yml */,
 			);
 			path = Rational;
 			sourceTree = "<group>";

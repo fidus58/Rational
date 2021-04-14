@@ -1,0 +1,11 @@
+extraction:
+  cpp:
+    prepare:
+      packages:
+        - g++
+    after_prepare:
+      - export GNU_MAKE=make
+      - export GIT=true
+    index:    # Customizable step used by all languages.
+      build_command:
+        - $GNU_MAKE -j2 -s 
