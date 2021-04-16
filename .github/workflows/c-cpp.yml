@@ -13,7 +13,7 @@ jobs:
 
     steps:
     - name: checkout repo
-      run: actions/checkout@v2
+      uses: actions/checkout@v2
 
     - name: make
       run: make
