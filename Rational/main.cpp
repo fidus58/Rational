@@ -10,9 +10,9 @@
 #include "rational.hpp"
 
 int main() {
-    // using Rational = Rational<int>;
+    using Rational = Rational<long>;
     auto r1 = Rational{22,7};
-    const auto d1 = double(r1);
+    const auto d1 = to_double(r1);
     std::cout << r1 << "\n" << d1 << "\n";
     auto r2 = Rational{22,7};
     

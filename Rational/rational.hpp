@@ -19,7 +19,7 @@ private: // anyway classes start private
     I n, z;
     
 public:
-    Rational (int zaehler = 0, int nenner = 1) {
+    Rational (I zaehler = 0, I nenner = 1) {
         auto g = std::gcd(zaehler, nenner);
         z = zaehler / g;
         n = nenner / g;
@@ -27,9 +27,9 @@ public:
     
     friend Rational operator+(Rational r1, Rational r2)
     {
-        int hn = r1.n/std::gcd(r1.n, r2.n) * r2.n;
-        int z1 = hn/r1.n * r1.z;
-        int z2 = hn/r2.n * r2.z;
+        auto hn = r1.n/std::gcd(r1.n, r2.n) * r2.n;
+        auto z1 = hn/r1.n * r1.z;
+        auto z2 = hn/r2.n * r2.z;
         
         return Rational(z1 + z2, hn);
     }
@@ -40,12 +40,9 @@ public:
         return o<<"("<<r.z<<"/"<<r.n<<")";
     }
 
-    operator double() const {
-            return 1. * z / n;
+    friend double to_double(Rational r) {
+            return 1. * r.z / r.n;
     }
 };
-
-
-
 
 #endif /* rational_hpp */
