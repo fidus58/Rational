@@ -12,5 +12,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: checkout repo
+      run: actions/checkout@v2
+
     - name: make
       run: make
